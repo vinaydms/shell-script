@@ -1,7 +1,7 @@
 #!/bin/bash
 
-person1=lalitha # there is no space between variable and value
-person2=bala
+person1=waste # there is no space between variable and value
+person2=idiot
 
 echo "$person1:: Hello $person2, how are you?"
 echo "$person2:: Hi $person1, I am fine. How are you?"
