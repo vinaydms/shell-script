@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "please enter username::"
-read USERNAME # USERNAME IS VARIABLE
+read -s USERNAME # USERNAME IS VARIABLE
 echo "please enter password::"
-read PASSWORD
+read -s PASSWORD
 echo  "Username is: $USERNAME, Password is: $PASSWORD"
