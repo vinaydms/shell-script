@@ -19,3 +19,5 @@ then
 else`
     echo "Installation of mysql SUCCESS"
 fi
+
+echo "is script proceeding?"
