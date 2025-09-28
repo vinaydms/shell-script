@@ -15,10 +15,10 @@ echo "script started executing at: $TIMESTAMP"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-         echo -e "$0....$R FAILURE $N "
+         echo -e "$2....$R FAILURE  "
          exit 1
     else
-        echo -e "$0.....$G SUCCESS $N "
+        echo -e "$2.....$G SUCCESS  "
     fi
 }
 
