@@ -17,7 +17,7 @@ for i in $@
 do
     echo "packages to install: $i"
     dnf list installed $i
-    if [ $? eq 0]
+    if [ $? eq 0 ]
     then
         echo "$i already installed...SKIPPING"
     else
