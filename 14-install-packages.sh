@@ -10,6 +10,16 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+VALIDATE(){
+    if [ $1 -ne 0 ]
+    then 
+        echo -e "$2...$R FAILURE $N"
+        exit 1
+    else
+        echo -e "$2...$R SUCCESS $N"
+    fi
+}
+
 if [ $USERID -ne 0 ]
 then
     echo "please run this script with root access."
@@ -26,6 +36,7 @@ do
     then
         echo -e "$i already installed...$Y SKIPPING $N"
     else
-        echo "$i not installed...Need to install"
+        dnf install $i -y &>>$LOGFILE
+        VALIDATE $? "Installation of $i"
     fi
 done
