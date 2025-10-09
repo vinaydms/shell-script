@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIRECTORY=/tmp/appppp-logs
+SOURCE_DIRECTORY=/tmp/app-logs
 
 R="\e[31m"
 G="\e[32m"
@@ -11,5 +11,5 @@ then
     echo -e "$G SOURCE DIRECTORY EXISTS $N"
 else
     echo -e "$R please make sure $SOURCE_DIRECTORY exists $N"
-    exist 1 
+    exit 1 
 fi
