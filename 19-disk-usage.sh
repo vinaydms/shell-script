@@ -9,6 +9,6 @@ do
     FOLDER=$(echo $LINE | awk -F " " '{print $NF}')
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
-        echo "$FOLDER is more than $DISK_THERSHOLD, current usage: $Usage"
+        echo "$FOLDER is more than $DISK_THERSHOLD, current usage: $USAGE"
     fi
 done <<< $DISK_USAGE
