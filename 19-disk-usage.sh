@@ -1,7 +1,7 @@
 #!/bin/bash
 DISK_USAGE=$( df-hT | grep xfs )
-DISK_THERSHOLD=6
-while IFS=read -r line
+DISK_THRESHOLD=6
+while IFS= read -r line
 do
     USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
     FOLDER=$(ECHO $LINE | AWK -F " " '{print $NF}')
