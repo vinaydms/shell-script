@@ -17,4 +17,4 @@ git commit -m "why you committed
 git push -u origin main
 '''''
 
-git add . git commit -m "name"; git push origin main
+git add . ; git commit -m "name"; git push origin main
