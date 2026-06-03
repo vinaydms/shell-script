@@ -9,7 +9,7 @@ USERID=$(id -u)
     #echo "you are super user."
 #fi
 
-if [ $USERID eq 0 ]
+if [ $USERID -eq 0 ]
 then
     echo "please run this script root access."
     exit 0
