@@ -10,7 +10,7 @@ LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 #     exit 1 # manually exit other than zero 
 # else
 #     echo "you are super user."
-fi
+#fi
 if [ $USERID -eq 0 ]
 then
     echo "you are super user."
