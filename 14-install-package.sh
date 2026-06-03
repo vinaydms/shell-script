@@ -11,7 +11,6 @@ then
 else
     echo "you are super user."
 fi
-
 # if [ $USERID -eq 0 ]
 # then
 #     echo "you are super user."
@@ -20,7 +19,7 @@ fi
 for i in $@
 do
     echo "package to install: $i"
-    dnf installed $i &>>$LOGFILE
+    dnf list installed $i &>>$LOGFILE
     if [ $? -eq 0 ]
     then
         echo "$i already installed...SKIPPING"
