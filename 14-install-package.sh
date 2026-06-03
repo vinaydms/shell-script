@@ -15,3 +15,8 @@ then
 fi
 
 echo "ALL Packages: $@" 
+
+for i in $@
+do
+    echo "package to install: $i"
+done
