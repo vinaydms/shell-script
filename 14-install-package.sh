@@ -7,6 +7,14 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+VALIDATe(){
+    if [ $1 -eq 0 ]
+    then
+        echo -e "$2...$G SUCCESS $N"
+    else
+        echo -e "$2...$R FAILURE $N"
+    fi
+}
 
 # if [ $USERID -ne 0 ]
 # then    
@@ -28,6 +36,7 @@ do
     then
         echo -e "$i already installed...$Y SKIPPING $N"
     else
-        echo "$ not installed...need to install"
+        dnf install $i -y &>>LOGFILE
+        VALIDATE $? " Installation of $i"
     fi
 done
