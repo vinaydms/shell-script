@@ -15,4 +15,4 @@ then
     exit 0
 fi
 
- 
+echo "ALL Packages: $@" 
