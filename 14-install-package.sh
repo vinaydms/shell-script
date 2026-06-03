@@ -11,8 +11,8 @@ USERID=$(id -u)
 
 if [ $USERID -eq 0 ]
 then
-    echo "please run this script root access."
+    echo "you are super user."
     exit 0
 fi
 
-echo "All pacakages: $@"
+ 
