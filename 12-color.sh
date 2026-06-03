@@ -11,13 +11,23 @@ N="\e[0m"
 echo "Script started executing at: $TIMESTAMP"
 
 VALIDATE(){
-    if [ $1 -ne 0 ]
+  
+    #if [ $1 -ne 0 ]
+    #then
+    #    echo -e "$2....$R FAILURE $N"
+    #    exit 1
+    #else
+    #    echo -e "$2....$G SUCCESS $N"
+    #fi
+    if [ $1 -eq 0 ]
     then
-        echo -e "$2....$R FAILURE $N"
-        exit 1
+        echo -e "$2.....$G SUCCESS $N"
+        exit 0
     else
-        echo -e "$2....$G SUCCESS $N"
+        echo -e "$2.....$R FAILURE $N"
     fi
+
+
 }
 
 if [ $USERID -ne 0 ]
@@ -35,5 +45,5 @@ VALIDATE $? "Installing MySQL"
 dnf install git -y &>>$LOGFILE
 VALIDATE $? "Installing Git"  
 
-dnf install dockerr -y &>>$LOGFILE
+dnf install docker -y &>>$LOGFILE
 VALIDATE $? "Installing Docker"
