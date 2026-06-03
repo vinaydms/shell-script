@@ -14,8 +14,6 @@ then
     echo "you are super user."
 fi
 
-echo "ALL Packages: $@" 
-
 for i in $@
 do
     echo "package to install: $i"
