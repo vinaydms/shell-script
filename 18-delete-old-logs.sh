@@ -21,3 +21,7 @@ fi
 # else
 #     echo "Folder does not exist"
 # fi
+
+FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
+
+echo "Files to delete: $FILES"
