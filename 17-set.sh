@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+
 failure(){
     echo "Failed at $1: $2" 
 }
