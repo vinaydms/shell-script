@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIRECTORY=/tmp/app-logs
+SOURCE_DIRECTORY=/tmp/apppp-logs
 
 R="\e[31m"
 G="\e[32m"
@@ -14,3 +14,10 @@ else
     echo -e "$R please make sure $SOURCE_DIRECTORY exists $N"
     exit 1
 fi
+
+# if [ -d "/path/to/folder" ]
+# then
+#     echo "Folder exists"
+# else
+#     echo "Folder does not exist"
+# fi
